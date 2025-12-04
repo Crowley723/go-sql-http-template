@@ -24,3 +24,9 @@ coverage-html:
 
 generate:
 	go generate ./...
+
+new-user:
+	curl -X "POST" http://localhost:8080/api/users -H "Content-Type: application/json" -d '{"email":"test@example.com","name":"Test User"}'
+
+delete-user:
+	curl -X "DELETE" http://localhost:8080/api/users/1
